@@ -2,6 +2,10 @@
     font-family: "Dosis-Bold";
     src: url("../storage/fonts/Dosis/static/Dosis-Bold.ttf");
 };
+@font-face {
+    font-family: "Dosis-Medium";
+    src: url("../storage/fonts/Dosis/static/Dosis-Medium.ttf");
+};
 
 *{
     padding: 0;
@@ -43,7 +47,43 @@ header{
     width: 82%;
     height: 4vh;
 }
-#photo{
-    border-radius: ;
+.flex__users{
+    justify-content: center;
+    border: 1px solid black;
 }
+.information__user{
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border: 1px solid red;
+}
+.section__photo{
+    display: flex;
+    justify-content: center;
 
+    border: 1px solid black;
+}
+.section__information{
+    width: 100%;
+}
+#photo{
+    margin: 0;
+    margin-left: 2vw;
+    width: 65px;
+    border-radius: 50%;
+}
+#name{
+    margin: 0;
+    margin-top: 3vh;
+    margin-left: 4vw;
+    font-family: "Dosis-Bold", sans-serif;
+    color: gray;
+}
+#location{
+    margin: 0;
+    margin-top: 1vw;
+    font-size: 3vw;
+    margin-left: 4vw;
+    font-family: "Dosis-Dosis-Medium", sans-serif;
+}
