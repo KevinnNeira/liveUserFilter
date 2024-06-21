@@ -49,20 +49,17 @@ header{
 }
 .flex__users{
     justify-content: center;
-    border: 1px solid black;
 }
 .information__user{
     height: 13vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    border: 1px solid red;
+    border: 1px solid rgb(199, 197, 197);
 }
 .section__photo{
     display: flex;
     justify-content: center;
-
-    border: 1px solid black;
 }
 .section__information{
     width: 100%;
