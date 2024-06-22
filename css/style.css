@@ -45,6 +45,10 @@ header{
     margin-right: 9%;
     width: 82%;
     height: 4vh;
+    transition: 0.5s;
+}
+#search__bar:hover{
+    filter: invert();
 }
 .flex__users{
     justify-content: center;
@@ -65,13 +69,15 @@ header{
 }
 #photo{
     margin: 0;
+    margin-top: 3vh;
     margin-left: 2vw;
-    width: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 #name{
     margin: 0;
-    margin-top: 3vh;
+    margin-top: 4vh;
     margin-left: 4vw;
     font-family: "Dosis-Bold", sans-serif;
     color: gray;
