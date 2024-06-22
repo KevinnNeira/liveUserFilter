@@ -5,39 +5,31 @@ let container = document.querySelector("#Flex");
 let searchBar = document.querySelector("#search__bar");
 let findUsersCont = document.querySelector("#findUsersCont");
 
-searchBar.addEventListener("change", async() => {
+searchBar.addEventListener("change", async () => {
     console.log("Buscando...");
     container.innerHTML = "";
     findUsersCont.innerHTML = 0;
 
-    let text = searchBar.value;
-    text = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');;
-    
-    let data = await getUsers();
-    data = await data.json();
+    let text = searchBar.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    let response = await getUsers();
+    let data = await response.json();
+
+    let filteredUsers = data.filter(user => {
+        let userName = user.name_full.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        let userDescript = user.description.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        return userName.includes(text) || userDescript.includes(text);
+    });
 
     let cont = 0;
 
-    for (let i = 0; i < 100; i++) {
-        console.log('for');
-        
-        let user = data[i];
-        let userName = user.name_full;
-        let userName1 = userName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');;
+    for (let user of filteredUsers.slice(0, 100)) {
+        console.log('Processing user');
+        await results(user.id);
+        cont++;
+    }
 
-        let userDescript = user.description;
-        let userDescript1 = userDescript.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');;
-
-        if (userName1.includes(text) || userDescript1.includes(text)){
-            console.log('if');
-            let id = user.id;
-            await results(id);
-            cont ++;
-        }
-    };
-
-    if (cont == 0){
+    if (cont === 0) {
         alert("No se encontraron resultados :(");
-    };
-
+    }
 });
