@@ -84,3 +84,19 @@ header{
     margin-left: 4vw;
     font-family: "Dosis-Dosis-Medium", sans-serif;
 }
+.icon__counter{
+    height: 10vh;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+#image{
+    margin-left: 14vw;
+    margin-right: 10vw;
+    float: right;
+    width:17vw;
+}
+#findUsersCont{
+    font-size: 15vw;
+    color: white;
+}
