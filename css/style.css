@@ -24,7 +24,6 @@ header{
     margin: 0;
     font-family: "Dosis-Bold", sans-serif;
     padding-left: 5vh;
-    padding-top: 5vh;
 
 }
 #description__header{
@@ -85,18 +84,20 @@ header{
     font-family: "Dosis-Dosis-Medium", sans-serif;
 }
 .icon__counter{
-    height: 10vh;
-    background-color: red;
+    height: 5vh;
     display: flex;
     flex-direction: row;
 }
 #image{
-    margin-left: 14vw;
-    margin-right: 10vw;
+    margin-left: 77vw;
+    margin-right: 2vw;
     float: right;
-    width:17vw;
+    width:10vw;
 }
 #findUsersCont{
-    font-size: 15vw;
+    margin: 0;
+    margin-top: 1vh;
+    font-family: "Dosis-Bold", sans-serif;
+    font-size: 4vw;
     color: white;
 }
