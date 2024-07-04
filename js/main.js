@@ -5,7 +5,7 @@ let container = document.querySelector("#Flex");
 let searchBar = document.querySelector("#search__bar");
 let findUsersCont = document.querySelector("#findUsersCont");
 
-searchBar.addEventListener("change", async () => {
+searchBar.addEventListener("input", async () => {
     console.log("Buscando...");
     container.innerHTML = "";
     findUsersCont.innerHTML = 0;
